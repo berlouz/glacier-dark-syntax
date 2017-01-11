@@ -1,8 +1,7 @@
 
 // Editor styles (background, gutter, guides)
 
-atom-text-editor, // <- remove when Shadow DOM can't be disabled
-:host {
+atom-text-editor {
   background-color: @syntax-background-color;
   color: @mono-4;
 
@@ -81,6 +80,6 @@ atom-text-editor, // <- remove when Shadow DOM can't be disabled
   }
 }
 
-atom-text-editor .gutter .line-number.git-line-modified, atom-text-editor::shadow .gutter .line-number.git-line-modified {
+atom-text-editor .gutter .line-number.git-line-modified, atom-text-editor.editor .gutter .line-number.git-line-modified {
   border-left:2px solid #d73c4d;
 }
