@@ -2,7 +2,7 @@
 
 .syntax--comment {
   color: @mono-3;
-  font-style: italic;
+  font-style: italic ;
 
   .syntax--markup.syntax--link {
     color: @mono-3;
@@ -304,5 +304,45 @@
 
   &.syntax--raw {
     color: @hue-4;
+  }
+}
+
+.syntax--source.syntax--css {
+
+  // highlight properties/values if they are supported
+  .syntax--property-name,
+  .syntax--property-value {
+    color: @mono-2;
+    &.syntax--support {
+      color: @mono-4;
+    }
+  }
+
+  .syntax--entity.syntax--other.syntax--attribute-name {
+    color: @mono-1;
+  }
+  .syntax--punctuation.syntax--definition.syntax--entity.syntax--css {
+    color: @hue-3;
+  }
+  .syntax--support.syntax--constant.syntax--property-value.syntax--css {
+    color: @hue-3;
+  }
+}
+
+.syntax--source.syntax--js {
+  .syntax--keyword.syntax--operator {
+    color: @hue-1;
+
+    // keywords are definded in https://github.com/atom/language-javascript/blob/master/grammars/javascript.cson
+    // search "instanceof" for location
+    &.syntax--delete,
+    &.syntax--in,
+    &.syntax--of,
+    &.syntax--instanceof,
+    &.syntax--new,
+    &.typeof,
+    &.syntax--void {
+      color: @hue-3;
+    }
   }
 }
